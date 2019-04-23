@@ -1,0 +1,7 @@
+-> I idntified this task as a named entity recognition problem and therefore at first applied NER techniques.
+ 
+-> I tried using nltk chunking function and representing it using IOB tags. But the output provided by this was not accurate. 
+
+-> Then I tried using spacy library for NER with en_core_web_sm training data loader. The accuracy was better but due to the limited types of entities which can be marked by spacy, I could not get the rounding entity.
+
+-> Finally, on further exploration of the data, I noticed that there were certain common structures in the provided sentences which could be used to find out the required entities. Therefore, I created my own algorithm using regex expressions and pattern matching to solve the given task. The algorithm wriiten by me gave an 100% accuracy for the given input data sentences but since it relies on the presence of certain patterns in the sentence, it can be looked upon as a form of overfitting which may fail for sentences with different structures. But at the same time, the patterns on which my algorithm relies are based on the general rules of english language and therefore I expect it to work with good accuracy score for majority of the sentences.

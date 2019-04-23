@@ -1,0 +1,22 @@
+My approach to solve this problem involved the following steps-
+
+1. convert the data into csv
+2. clean the email text by removing stopwords, words of length less than 3 and changing all texts to lower case
+3. changing the labels from yes/no to 1/0
+4. generating input and output tockens from the text data
+5. performing word embeddings on the tockens using Word2Vec and Doc2Vec to create vector models
+6. Applying these vector models to the classifier models.
+7. Algorithms used to create the classifier model-
+	->neural network (low accuracy since dataset was small)
+	->Random Forrest
+	->Logistc Regression
+	->Naive Bayes
+	->Support Vector Machines (provided max accuracy)
+8. SVM provided the maximum accuracy out of all the classfication algorithms but still its score was coming in the fifties. Therefore, to improve the accuracy of SVM, I tried various different techniques such as-
+	-> changing the C parameter to balance overfitting and accuracy
+	-> changing the kernel with all possible value. Max accuracy was provided by polynomial.
+	-> applying cross validation to the training dataset
+	-> applying bagging using the "BaggingEnsemble" function provided by scikit-learn
+	-> changing the ngram size to manipulate the feature vectors
+	-> changing the feature vector length between 100 to 1000
+9. After all this parameter tuning, the maximum accuracy obtained was 72%
